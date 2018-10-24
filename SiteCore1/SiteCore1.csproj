@@ -148,7 +148,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminPanelController.cs" />
-    <Compile Include="Controllers\CustomRouteAttribute\AdminVerify.cs" />
+    <Compile Include="Controllers\CustomFilterAttribute\AdminVerify.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
