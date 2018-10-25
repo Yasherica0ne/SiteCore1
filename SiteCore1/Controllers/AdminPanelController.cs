@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using SiteCore1.Controllers.CustomRouteAttribute;
+using SiteCore1.Storage;
 using System.Web.Mvc;
 
 namespace SiteCore1.Controllers
@@ -9,10 +7,18 @@ namespace SiteCore1.Controllers
     public class AdminPanelController : Controller
     {
         // GET: Admin
-        //[Route("Admin/NewEvent/{secret:values(sitecore)}")]
-        public ActionResult Admin()
+        [AdminVerify]
+        public ActionResult NewEvent(string secret)
         {
             return View();
+        }
+
+        [HttpPost]
+        public void AddEventForm(Models.EventModel eventModel)
+        {
+            eventModel.SetParameters();
+            //EventStorage
+            //Do something with formData
         }
     }
 }

@@ -1,7 +1,5 @@
-﻿using SiteCore1.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using SiteCore1.Controllers.CustomRouteAttribute;
+using SiteCore1.Storage;
 using System.Web;
 using System.Web.Mvc;
 
@@ -9,9 +7,7 @@ namespace SiteCore1.Controllers
 {
     public class HomeController : Controller
     {
-        //[Route("Home/Index/{secret:values(sitecore)}")]
-
-        public ActionResult Index(string secret)
+        public ActionResult Index()
         {
             string eventsString = EventStorage.GetMarkup();
             @ViewBag.eventList = new HtmlString(eventsString);

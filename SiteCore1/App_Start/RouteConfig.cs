@@ -1,6 +1,4 @@
-﻿using SiteCore1.Controllers.CustomRouteAttribute;
-using System.Web.Mvc;
-using System.Web.Mvc.Routing;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace SiteCore1
@@ -13,11 +11,9 @@ namespace SiteCore1
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{secret}",
-                defaults: new { controller = "Home", action = "Index" },
-                constraints: new { secret = new AdminVerify("sitecore") }
+                url: "{controller}/{action}",
+                defaults: new { controller = "Home", action = "Index" }
             );
-
         }
     }
 }

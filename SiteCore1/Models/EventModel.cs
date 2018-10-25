@@ -4,11 +4,17 @@ namespace SiteCore1.Models
 {
     public class EventModel
     {
-        public string MakeCodeString(string name, Guid id)
+        private string MakeCodeString(string name, Guid id)
         {
             string[] newName = name.Split(' ');
             string code = string.Join("-", newName) + "-" + id.ToString();
             return code;
+        }
+
+        public void SetParameters()
+        {
+            ID = Guid.NewGuid();
+            Code = MakeCodeString(Name, ID);
         }
 
         public EventModel(string name, string shortDescription, DateTime date)
