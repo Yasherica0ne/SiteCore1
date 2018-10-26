@@ -179,3 +179,4 @@ C:\WMLabs\SiteCore1\SiteCore1\obj\Release\SiteCore1.csproj.CopyComplete
 C:\WMLabs\SiteCore1\SiteCore1\obj\Release\SiteCore1.dll
 C:\WMLabs\SiteCore1\SiteCore1\obj\Release\SiteCore1.pdb
 C:\WMLabs\SiteCore1\SiteCore1\obj\Release\SiteCore1.csprojAssemblyReference.cache
+E:\GitHub\WM\SiteCore1\SiteCore1\obj\Release\SiteCore1.csprojAssemblyReference.cache

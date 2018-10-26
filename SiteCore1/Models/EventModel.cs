@@ -17,6 +17,10 @@ namespace SiteCore1.Models
             Code = MakeCodeString(Name, ID);
         }
 
+        public EventModel()
+        {
+        }
+
         public EventModel(string name, string shortDescription, DateTime date)
         {
             ID = Guid.NewGuid();
@@ -30,6 +34,7 @@ namespace SiteCore1.Models
         public string Name { get; set; }
         public string ShortDescription { get; set; }
         public DateTime Date { get; set; }
+        public DateTime Time { get; set; }
         public string Code { get; set; }
     }
 }

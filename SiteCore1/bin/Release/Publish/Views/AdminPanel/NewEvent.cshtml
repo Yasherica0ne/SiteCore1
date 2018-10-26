@@ -1,6 +1,5 @@
 ﻿<h2>Admin Panel</h2>
-@model SiteCore1.Models.EventModel
-@using (Html.BeginForm("AddEventForm", "AdminPanel", FormMethod.Post))
+@*@using (Html.BeginForm("AddEventForm", "AdminPanel", FormMethod.Post))
 {
     <table>
         <tr>
@@ -8,16 +7,16 @@
             <td>@Html.TextBoxFor(model => model.Name)</td>
         </tr>
         <tr>
-            <td><p>Enter short description</p></td>
+            <td><p>Enter short description :</p></td>
             <td> @Html.TextBoxFor(model => model.ShortDescription)</td>
         </tr>
         <tr>
-            <td><p>Enter date</p></td>
-            <td>@Html.TextBoxFor(model => model.Date, new { type = "date" })</td>
+            <td><p>Enter date :</p></td>
+            <td>@Html.Dat</td>
         </tr>
         <tr>
             <td><input type="submit" value="Отправить" /> </td>
             <td></td>
         </tr>
     </table>
-}
+}*@

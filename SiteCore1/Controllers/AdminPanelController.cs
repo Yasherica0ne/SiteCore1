@@ -14,10 +14,11 @@ namespace SiteCore1.Controllers
         }
 
         [HttpPost]
-        public void AddEventForm(Models.EventModel eventModel)
+        public RedirectResult AddEventForm(Models.EventModel eventModel)
         {
             eventModel.SetParameters();
-            //EventStorage
+            EventStorage.Events.Add(eventModel);
+            return Redirect("/Home/Index");
             //Do something with formData
         }
     }

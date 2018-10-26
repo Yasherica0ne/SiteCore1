@@ -15,10 +15,10 @@ namespace SiteCore1.Storage
             StringBuilder builder = new StringBuilder();
             foreach (EventModel model in Events)
             {
-                builder.AppendLine("<div class=\"col-md-4\">" +
+                builder.AppendLine("<div class=\"col-md-3\" style='margin-bottom: 2vh'>" +
                     $"<div>{model.Name}</div>" +
                     $"<div>{model.ShortDescription}</div>" +
-                    $"<div>Date: {model.Date}</div>" +
+                    $"<div>Date: {model.Date.ToShortDateString()}</div>" +
                     "</div>");
             }
             return builder.ToString();
@@ -28,8 +28,10 @@ namespace SiteCore1.Storage
             Events = new List<EventModel>
             {
                 new EventModel("First lab", "Must go to the first lab", DateTime.Now),
-                new EventModel("Second lab", "Must go to the second lab", DateTime.Now.AddHours(1.5)),
-                new EventModel("Third lab", "Must go to the third lab", DateTime.Now.AddHours(3))
+                new EventModel("Second lab", "Must go to the second lab", DateTime.Now.AddDays(1)),
+                new EventModel("Third lab", "Must go to the third lab", DateTime.Now.AddDays(2)),
+                new EventModel("Fourth lab", "Must go to the fourth lab", DateTime.Now.AddDays(3)),
+                new EventModel("Fifth lab", "Must go to the fifth lab", DateTime.Now.AddDays(4))
             };
         }
 
